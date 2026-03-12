@@ -1,0 +1,42 @@
+name: flutte_thai_hotline_app
+description: "A new Flutter project."
+
+publish_to: "none"
+
+environment:
+  sdk: ^3.10.8
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  url_launcher: ^6.3.2
+  introduction_screen: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icon/
+    - assets/icon/highway.png/
+    - assets/icon/police.png/
+    - assets/icon/bbank.png/
+    - assets/icon/telecome.png/
+
+fonts:
+  - family: Kanit
+    fonts:
+      - asset: assets/fonts/Kanit-Bold.ttf
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"
