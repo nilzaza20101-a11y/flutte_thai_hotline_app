@@ -19,12 +19,13 @@ class ProfileUi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 87, 135, 173),
+        backgroundColor: const Color.fromARGB(129, 50, 22, 22),
         centerTitle: true,
         title: Text(
           "สายด่วน THAILAND",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
       body: SingleChildScrollView(
@@ -56,7 +57,7 @@ class ProfileUi extends StatelessWidget {
               ),
               SizedBox(height: 30),
               Card(
-                elevation: 5,
+                elevation: 8,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),

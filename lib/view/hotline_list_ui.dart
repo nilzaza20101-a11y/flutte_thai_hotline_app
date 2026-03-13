@@ -232,8 +232,9 @@ class HotlineListUi extends StatelessWidget {
       ];
     }
     return Scaffold(
+      backgroundColor:Color.fromARGB(255, 0, 25, 45),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 87, 135, 173),
+        backgroundColor: Color.fromARGB(255, 0, 25, 45),
         centerTitle: true,
         title: Text(
           title,
@@ -245,6 +246,7 @@ class HotlineListUi extends StatelessWidget {
         ),
         leading: IconButton(
           icon: Icon(Icons.home, size: 30),
+          color: Colors.white,
           onPressed: () {
             Navigator.pushAndRemoveUntil(
               context,
@@ -256,6 +258,7 @@ class HotlineListUi extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.person, size: 30),
+            color: Colors.white,
             onPressed: () {
               Navigator.push(
                 context,
@@ -267,11 +270,29 @@ class HotlineListUi extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Image.asset(
-            getHeaderImage(),
-            width: double.infinity,
-            height: 300,
-            fit: BoxFit.cover,
+          Padding(
+            padding: EdgeInsets.all(15),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.white,
+                    blurRadius: 10,
+                    offset: Offset(0, 5),
+                  ),
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Image.asset(
+                  getHeaderImage(),
+                  height: 180,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
           ),
           Expanded(
             child: ListView.builder(
@@ -279,7 +300,12 @@ class HotlineListUi extends StatelessWidget {
               itemCount: data.length,
               itemBuilder: (context, index) {
                 return Card(
+                  elevation: 20,
+                  shadowColor: const Color.fromARGB(180, 255, 255, 255),
                   margin: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadiusGeometry.circular(15),
+                  ),
                   child: ListTile(
                     leading: SizedBox(
                       width: 60,
